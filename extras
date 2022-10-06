@@ -1,0 +1,55 @@
+<select onChange={handleTypeChange}>
+        
+    <option value = "select prod type">-- select type -- </option>
+    
+    {prodList.map((prod) => <option key={uuidv4()} label={prod}>{prodType}</option>)}
+ </select> 
+    {prodType}
+
+
+    to put dropdown.
+
+
+
+
+    for selecting:
+    const handleTypeChange = (e) => {
+        setProdType(e.target.value);
+        console.log('this is ',prodType);
+    }
+
+
+
+
+    in product add page:
+    const addProductTypes = () => {
+
+        if (productType){
+            setProdList(prodList.concat(productType));
+    
+        }
+            setProdType('');
+    
+    
+            console.log(prodList);
+    
+        Axios.post('http://localhost:3307/addproduct',{
+          productType: productType
+        }).then((response)=> {
+          console.log(response);
+        });
+    }
+
+
+other menu dropdown
+    <Dropdown
+        formLabel="choose product type"
+        buttonText="Send form"
+        action="/"
+      >
+        <Option selected value="select .." />
+        <Option value="Option 1" />
+        <Option value="Option 2" />
+        <Option value="Option 3"/> 
+        <Option value={productType}/>
+      </Dropdown>
