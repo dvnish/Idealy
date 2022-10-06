@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/ba7b3b20-591d-446c-9e31-25381a192b4c/AppServices/subscriptions/ba7b3b20-591d-446c-9e31-25381a192b4c/resourceGroups/Idealy_Resource/providers/Microsoft.Web/sites/idealy",
+    "appService.deploySubpath": "."
+}
